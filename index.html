@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikasi Integral Trapesium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Integral Numerik<br>Metode Pias Trapesium</h1>
+
+    <label>Fungsi f(x)</label>
+    <input type="text" id="fungsi" placeholder="contoh: x*x + 2*x">
+
+    <label>Batas Bawah (a)</label>
+    <input type="number" id="a">
+
+    <label>Batas Atas (b)</label>
+    <input type="number" id="b">
+
+    <label>Jumlah Pias (n)</label>
+    <input type="number" id="n">
+
+    <button onclick="hitungIntegral()">Hitung</button>
+
+    <div class="hasil">
+        <p id="output"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
