@@ -4,6 +4,21 @@ function hitungIntegral() {
     let b = parseFloat(document.getElementById("b").value);
     let n = parseInt(document.getElementById("n").value);
 
+    if (!fungsi || isNaN(a) || isNaN(b) || isNaN(n)) {
+        alert("Semua input harus diisi!");
+        return;
+    }
+
+    if (n <= 0) {
+        alert("Jumlah pias (n) harus lebih dari 0");
+        return;
+    }
+
+    if (a >= b) {
+        alert("Batas bawah harus lebih kecil dari batas atas");
+        return;
+    }
+
     let h = (b - a) / n;
     let jumlah = 0;
 
@@ -21,5 +36,6 @@ function hitungIntegral() {
     let hasil = (h / 2) * jumlah;
 
     document.getElementById("output").innerText =
-        "Hasil integral ≈ " + hasil.toFixed(6);
+        hasil.toFixed(6);
 }
+
